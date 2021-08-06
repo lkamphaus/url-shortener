@@ -11,8 +11,12 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: '25ch',
+    width: '50ch',
   },
+  input: {
+    width: 500,
+    margin: 20,
+  }
 }));
 
 const Form = () => {
@@ -23,10 +27,8 @@ const Form = () => {
         <TextField
           id="standard-full-width"
           label="Label"
-          style={{ margin: 6 }}
+          className={classes.input}
           placeholder="Placeholder"
-          helperText="Full width!"
-          fullWidth
           margin="normal"
           InputLabelProps={{
             shrink: true,
