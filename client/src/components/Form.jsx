@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // display: 'flex',
+    display: 'flex',
     flexWrap: 'wrap',
+    alignItems: 'flex-end',
   },
   textField: {
     marginLeft: theme.spacing(1),
@@ -16,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
   input: {
     width: 500,
     margin: 20,
+  },
+  button: {
+    margin: 20,
+    alignSelf: 'flex-end',
   }
 }));
 
@@ -26,14 +32,20 @@ const Form = () => {
       <div>
         <TextField
           id="standard-full-width"
-          label="Label"
+          label="URL"
           className={classes.input}
-          placeholder="Placeholder"
+          placeholder="Paste your URL here"
           margin="normal"
           InputLabelProps={{
             shrink: true,
           }}
         />
+        <Button
+          variant="outlined"
+          color="primary"
+          className={classes.button}>
+          Primary
+        </Button>
       </div>
     </div>
   )
