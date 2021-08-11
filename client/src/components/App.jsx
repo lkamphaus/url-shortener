@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -20,6 +21,11 @@ const useStyles = makeStyles((theme) => ({
   control: {
     padding: theme.spacing(2),
   },
+  title: {
+    display: "flex",
+    justifyContent: "center",
+    padding: 20,
+  }
 }));
 
 const App = () => {
@@ -31,6 +37,10 @@ const App = () => {
         <Grid container justifyContent="center" spacing={spacing}>
           <Grid>
             <Paper className={classes.paper}>
+              <Typography className={classes.title}>
+                Url Shortener
+              </Typography>
+              <br />
               <Form/>
             </Paper>
           </Grid>

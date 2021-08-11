@@ -44,7 +44,7 @@ const Form = () => {
           variant="outlined"
           color="primary"
           className={classes.button}>
-          Primary
+          Submit
         </Button>
       </div>
     </div>
