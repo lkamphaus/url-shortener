@@ -8,7 +8,7 @@ const router = express.Router();
 
 const Url = require('../models/Url');
 
-const baseUrl = 'https:localhost:7000';
+const baseUrl = 'http:localhost:7000';
 
 router.post('/shorten', async (req, res) => {
   const { longUrl } = req.body;
@@ -19,7 +19,7 @@ router.post('/shorten', async (req, res) => {
 
   const urlCode = shortid.generate();
 
-  if (validUrl.isUri(longUri)) {
+  if (validUrl.isUri(longUrl)) {
     try {
       let url = await Url.findOne({ longUrl });
 

@@ -13,14 +13,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', require('./db/controllers/redirect'));
 app.use('/api/url', require('./db/controllers/url'));
 
-app.get('/*',  (req, res) => {
+// app.get('/*',  (req, res) => {
 
-  res.sendFile(__dirname + '/client/dist/index.html', function (err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  })
-});
+//   res.sendFile(__dirname + '/client/dist/index.html', function (err) {
+//     if (err) {
+//       res.status(500).send(err)
+//     }
+//   })
+// });
 
 app.listen(port, function () {
   console.log(`listening on port ${port}`);
