@@ -1,5 +1,7 @@
 const express = require('express');
 const validUrl = require('valid-url');
+
+//create a unique id
 const shortid = require('shortid');
 
 const router = express.Router();
@@ -38,6 +40,9 @@ router.post('/shorten', async (req, res) => {
       }
     } catch (err) {
       console.log(err);
+      res.status(500)
     }
   }
 })
+
+module.exports = router

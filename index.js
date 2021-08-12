@@ -1,5 +1,5 @@
 const express = require('express');
-
+require('./db');
 
 const port = process.env.PORT || 7000;
 const path = require('path');
@@ -10,7 +10,8 @@ app.use(express.static(__dirname + "/client/dist"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+app.use('/', require('./db/controllers/redirect'));
+app.use('/api/url', require('./db/controllers/url'));
 
 app.get('/*',  (req, res) => {
 

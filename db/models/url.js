@@ -26,4 +26,4 @@ let urlSchema = mongoose.Schema({
 
 let url = mongoose.model('Url', urlSchema);
 
-module.exports = Chart;
+module.exports = url;
