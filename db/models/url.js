@@ -9,6 +9,7 @@ let urlSchema = mongoose.Schema({
     type: String,
     requried: Date.now
   },
+  //store unique code
   urlCode: {
     type: String,
     requried: true
