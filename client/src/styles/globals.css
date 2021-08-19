@@ -1,0 +1,40 @@
+.heroWithShape {
+  --background: #3f51b5;
+  --text-color: white;
+}
+
+.hero {
+  background: var(--background);
+  color: var(--text-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.svgShape {
+  color: var(--background);
+  width: 200%;
+  height: auto;
+}
+
+@media(min-width: 992px) {
+  .svgShape {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title {
+  font-family: "Arial Rounded MT Bold";
+  font-size: 85px;
+  margin-top: 100px;
+}
+
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
