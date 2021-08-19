@@ -8,7 +8,7 @@ const router = express.Router();
 
 const Url = require('../models/Url');
 
-const baseUrl = 'http:localhost:7000';
+const baseUrl = 'http://localhost:7000';
 
 router.post('/shorten', async (req, res) => {
   const { longUrl } = req.body;

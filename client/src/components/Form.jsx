@@ -66,8 +66,8 @@ export default function Form()  {
       </div>
       {shortUrl.length > 0 &&
           <div className={style.urlContainer}>
-            {/* <a href={shortUrl} target="_blank">{shortUrl}</a> */}
-            {shortUrl}
+             <a href={shortUrl} target="_blank">{shortUrl}</a>
+            {/* {shortUrl} */}
           </div>
         }
     </div>

@@ -34,7 +34,7 @@
 
 .container,
 .urlContainer {
-  margin: 20px;
+  margin: 40px;
   display: flex;
   justify-content: center;
   flex-grow: 1;
