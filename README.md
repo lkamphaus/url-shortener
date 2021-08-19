@@ -8,7 +8,7 @@
 
 
 ### General Info
-Url Shortener is a single-page application that allows users to transform a long url into a short url that redirects to the original url when used. 
+Url Shortener is a single-page application that allows users to transform a long url into a unique short url that redirects to the original url when used. 
 
 ### ✨ Demo
 Copy and paste url into the input
