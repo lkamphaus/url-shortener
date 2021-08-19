@@ -6,29 +6,16 @@ import Button from '@material-ui/core/Button';
 
 import style from '.././styles/globals.css';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//     alignItems: 'flex-end',
-//   },
-//   textField: {
-//     marginLeft: theme.spacing(1),
-//     marginRight: theme.spacing(1),
-//     width: '50ch',
-//   },
-//   input: {
-//     width: 500,
-//     margin: 20,
-//   },
-//   button: {
-//     margin: 20,
-//     alignSelf: 'flex-end',
-//   }
-// }));
+const useStyles = makeStyles((theme) => ({
+  button: {
+    height: 40,
+    alignSelf: "flex-end",
+    margin: "10px;"
+  }
+}));
 
 export default function Form()  {
-  // const classes = useStyles();
+  const classes = useStyles();
 
   const [longUrl, setLongUrl] = useState('');
   const [shortUrl, setShortUrl] = useState('');
@@ -56,8 +43,8 @@ export default function Form()  {
   }
 
   return (
-    <div className={style.container}>
-      <div>
+    <div>
+      <div className={style.container}>
         <TextField
           fullWidth="true"
           label="URL"
@@ -70,17 +57,19 @@ export default function Form()  {
           onChange={handleUrlChange}
         />
         <Button
+          className={classes.button}
           variant="outlined"
           color="primary"
           onClick={handleLongUrl}>
           Submit
         </Button>
-        {shortUrl.length > 0 &&
-          <div>
+      </div>
+      {shortUrl.length > 0 &&
+          <div className={style.urlContainer}>
+            {/* <a href={shortUrl} target="_blank">{shortUrl}</a> */}
             {shortUrl}
           </div>
         }
-      </div>
     </div>
   )
 }
